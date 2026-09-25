@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Проекты Б5Групп — геоинформационные, аналитические и отраслевые системы, доведённые до промышленной эксплуатации." />
+  <meta name="theme-color" content="#050505" />
+  <title>Проекты Б5Групп</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23050505'/%3E%3Cpath d='M7 7h11a7 7 0 0 1 0 14H7V7Zm5 5v4h6a2 2 0 1 0 0-4h-6Z' fill='%23f06019'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./cases.css" />
+  <script src="./script.js" defer></script>
+  <script src="./cases.js" defer></script>
+</head>
+<body class="projects-page is-loading">
+  <div class="preloader" data-preloader aria-hidden="true">
+    <div class="preloader__logo">
+      <img class="preloader__logo-layer preloader__logo-mark" src="./assets/b5g-logo.svg" alt="" />
+      <img class="preloader__logo-layer preloader__logo-word" src="./assets/b5g-logo.svg" alt="" />
+    </div>
+    <div class="preloader__counter"><span data-preloader-count>0</span><em>%</em></div>
+  </div>
+  <a class="skip-link" href="#content">Перейти к содержанию</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="./index.html#top" aria-label="Б5Групп — на главную"><img src="./assets/b5g-logo.svg" alt="Б5Групп" /></a>
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a href="./index.html#about">О компании</a><a href="./index.html#services">Виды деятельности</a><a href="./index.html#products">Решения</a><a class="is-active" href="./cases.html" aria-current="page">Проекты</a><a href="./index.html#initiatives">Инициативы</a>
+    </nav>
+    <a class="header-contact" href="#contact">Обсудить задачу</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню"><span></span><span></span></button>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация" hidden>
+      <a href="./index.html#about">О компании</a><a href="./index.html#services">Виды деятельности</a><a href="./index.html#products">Решения</a><a href="./cases.html" aria-current="page">Проекты</a><a href="./index.html#initiatives">Инициативы</a><a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero projects-hero" id="top">
+      <img class="hero__image parallax" src="./assets/projects-hero-v1.png" alt="Специалисты анализируют цифровую карту территорий" />
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content shell">
+        <div class="hero__copy">
+          <h1>Проекты, которые работают</h1>
+          <p class="hero__lead">Реальные системы для территорий, отраслей и людей. От сложных данных — к измеримому результату.</p>
+          <div class="hero__actions"><a class="button button--primary" href="#projects-list">Смотреть проекты <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <p class="projects-hero__stat"><strong>8</strong><span>проектов<br />в подборке</span></p>
+      </div>
+      <a class="scroll-cue" href="#projects-list" aria-label="Перейти к списку проектов"><span></span></a>
+    </section>
+
+    <section class="projects-catalog" id="projects-list">
+      <div class="shell">
+        <div class="projects-catalog__head reveal">
+          <h2>Найдите нужный проект</h2>
+          <p><span data-project-count>8</span> <span data-project-count-label>проектов</span></p>
+        </div>
+        <div class="project-filters reveal" role="group" aria-label="Фильтр проектов">
+          <button class="is-active" type="button" data-filter="all" aria-pressed="true">Все</button>
+          <button type="button" data-filter="realestate" aria-pressed="false">Недвижимость</button>
+          <button type="button" data-filter="territory" aria-pressed="false">Территории</button>
+          <button type="button" data-filter="utilities" aria-pressed="false">ЖКХ</button>
+          <button type="button" data-filter="agro" aria-pressed="false">АПК</button>
+          <button type="button" data-filter="ecology" aria-pressed="false">Экология</button>
+          <button type="button" data-filter="import" aria-pressed="false">Импортозамещение</button>
+        </div>
+
+        <div class="projects-grid" data-project-grid>
+          <a class="project-tile project-tile--city reveal" data-category="realestate" href="./products/b5gis/index.html">
+            <img src="./assets/case-city-realestate-orange-lines.png" alt="Городская застройка с объектами недвижимости" loading="lazy" />
+            <span>Недвижимость</span><h3>Вовлечение объектов недвижимости в налоговый оборот</h3>
+          </a>
+          <a class="project-tile project-tile--land reveal" data-category="territory" href="./products/b5gis/index.html">
+            <img src="./assets/case-land-monitoring-orange-lines.png" alt="Контролируемая территория вдоль реки" loading="lazy" />
+            <span>Территории</span><h3>Дистанционный контроль использования территории</h3>
+          </a>
+          <a class="project-tile project-tile--soil reveal" data-category="agro" href="./products/b5gis/index.html">
+            <img src="./assets/case-soil-model-orange-lines.png" alt="Поля единой цифровой модели почв" loading="lazy" />
+            <span>АПК</span><h3>Единая цифровая модель почвенного покрова</h3>
+          </a>
+          <a class="project-tile project-tile--industry reveal" data-category="import" href="./products/b5gis/index.html">
+            <img src="./assets/case-industrial-import-substitution-orange-lines.png" alt="Промышленная система нефтегазового предприятия" loading="lazy" />
+            <span>Импортозамещение</span><h3>Перевод отраслевой системы с зарубежной платформы</h3>
+          </a>
+          <a class="project-tile project-tile--analytics reveal" data-category="utilities" href="./products/b5gis/index.html">
+            <img src="./assets/product-b5analytics-v2.png" alt="Территориальная аналитика городского хозяйства" loading="lazy" />
+            <span>ЖКХ</span><h3>Контроль муниципального хозяйства</h3>
+          </a>
+          <a class="project-tile project-tile--fields reveal" data-category="agro" href="./products/b5gis/index.html">
+            <img src="./assets/product-b5gis-v2.png" alt="Сельскохозяйственные территории с цифровыми границами" loading="lazy" />
+            <span>АПК</span><h3>Возвращение сельхозземель в оборот</h3>
+          </a>
+          <a class="project-tile project-tile--ecology reveal" data-category="ecology" href="./products/b5gis/index.html">
+            <img src="./assets/agrontri-fields-drone.png" alt="Мониторинг состояния природных территорий" loading="lazy" />
+            <span>Экология</span><h3>Мониторинг состояния и использования земель</h3>
+          </a>
+          <a class="project-tile project-tile--logistics reveal" data-category="territory" href="./products/b5gis/index.html">
+            <img src="./assets/product-stackrus-v2.png" alt="Цифровая логистическая цепочка между объектами" loading="lazy" />
+            <span>Территории</span><h3>Единая цифровая карта инфраструктуры региона</h3>
+          </a>
+        </div>
+        <p class="projects-empty" data-project-empty hidden>В этой категории пока нет опубликованных проектов.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact"><div class="shell contact__grid"><div class="contact__copy reveal"><h2>Поможем определить объём работ, сроки и подходящее решение</h2><p>Если вы создаёте новую систему, развиваете действующую или переходите на отечественное ПО — начнём с короткого разговора.</p><div class="contact__direct"><a href="tel:+74954079920">+7 495 407 99 20</a><a href="mailto:info@b5g.ru">info@b5g.ru</a></div></div><form class="contact-form reveal" data-contact-form>
+      <label><span>Имя</span><input name="name" autocomplete="name" required /></label><label><span>Организация</span><input name="company" autocomplete="organization" /></label><label><span>Телефон или почта</span><input name="contact" required /></label><label class="contact-form__wide"><span>Задача</span><textarea name="message" rows="4" required></textarea></label><label class="consent contact-form__wide"><input type="checkbox" required /><span>Согласен на обработку персональных данных</span></label><button class="button button--primary contact-form__wide" type="submit">Начать сотрудничество <span aria-hidden="true">↗</span></button><p class="form-status contact-form__wide" role="status" aria-live="polite"></p>
+    </form></div></section>
+  </main>
+
+  <footer class="footer"><div class="shell footer__inner"><img src="./assets/b5g-logo.svg" alt="Б5Групп" /><p>© 2026 Б5Групп. Все права защищены.</p><nav aria-label="Ссылки в подвале"><a href="#top">Наверх</a><a href="#contact">Контакты</a></nav></div></footer>
+</body>
+</html>
