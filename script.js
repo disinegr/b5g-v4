@@ -108,10 +108,9 @@ form?.addEventListener("submit", (event) => {
   const status = form.querySelector(".form-status");
   if (!form.reportValidity()) return;
   const data = new FormData(form);
-  const subject = encodeURIComponent(`Заявка с сайта Б5Групп — ${data.get("company") || data.get("name")}`);
+  const subject = encodeURIComponent(`Заявка с сайта Б5Групп — ${data.get("name")}`);
   const body = encodeURIComponent([
     `Имя: ${data.get("name")}`,
-    `Организация: ${data.get("company") || "—"}`,
     `Контакт: ${data.get("contact")}`,
     "",
     `Задача: ${data.get("message")}`
