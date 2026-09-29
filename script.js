@@ -32,6 +32,7 @@ if (preloader) {
 }
 
 const header = document.querySelector("[data-header]");
+const firstHero = document.querySelector("main > .hero, main > .detail-hero");
 const menuButton = document.querySelector(".menu-button");
 const mobileMenu = document.querySelector("#mobile-menu");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -55,9 +56,15 @@ menuButton?.addEventListener("click", () => {
 mobileMenu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 window.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
 
-const updateHeader = () => header?.classList.toggle("is-scrolled", window.scrollY > 28);
+const updateHeader = () => {
+  if (!header) return;
+  const headerBoundary = window.innerWidth <= 760 ? 70 : 84;
+  const isOverHero = firstHero && firstHero.getBoundingClientRect().bottom > headerBoundary;
+  header.classList.toggle("is-scrolled", !isOverHero);
+};
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
+window.addEventListener("resize", updateHeader, { passive: true });
 
 const revealItems = document.querySelectorAll(".reveal");
 if (reduceMotion.matches || !("IntersectionObserver" in window)) {
