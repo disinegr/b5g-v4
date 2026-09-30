@@ -26,12 +26,12 @@
   <header class="site-header" data-header>
     <a class="brand" href="../../index.html#top" aria-label="Б5Групп — на главную"><img src="../../assets/b5g-logo.svg" alt="Б5Групп" /></a>
     <nav class="desktop-nav" aria-label="Основная навигация">
-      <a href="../../index.html#about">О компании</a><a href="../../activities.html">Виды деятельности</a><a href="../../products.html">Продукты</a><a href="../../cases.html">Кейсы</a><span class="nav-pending" aria-label="Блог — скоро">Блог</span>
+      <a href="../../index.html#about">О компании</a><a href="../../activities.html">Виды деятельности</a><a href="../../products.html">Продукты</a><a href="../../cases.html">Кейсы</a><a href="../../blog.html">Блог</a>
     </nav>
     <a class="header-contact" href="#contact">Сотрудничать с нами <span aria-hidden="true">↗</span></a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню"><span></span><span></span></button>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация" hidden>
-      <a href="../../index.html#about">О компании</a><a href="../../activities.html">Виды деятельности</a><a href="../../products.html">Продукты</a><a href="../../cases.html">Кейсы</a><span class="nav-pending" aria-label="Блог — скоро">Блог</span><a href="#contact">Сотрудничать с нами</a>
+      <a href="../../index.html#about">О компании</a><a href="../../activities.html">Виды деятельности</a><a href="../../products.html">Продукты</a><a href="../../cases.html">Кейсы</a><a href="../../blog.html">Блог</a><a href="#contact">Сотрудничать с нами</a>
     </nav>
   </header>
 
@@ -41,15 +41,15 @@
       <div class="detail-hero__shade" aria-hidden="true"></div>
       <div class="detail-hero__content shell">
         <div class="detail-hero__copy">
-          <h1 id="detail-title">Все данные о территории в одном окне</h1>
+          <a class="detail-hero__back" href="../../products.html"><span aria-hidden="true">←</span> Вернуться к продуктам</a>
+          <a class="detail-hero__registry" href="https://reestr.digital.gov.ru/reestr/2547625/" target="_blank" rel="noreferrer">Реестр отечественного ПО, запись № 23338 от 25.07.2024 <span aria-hidden="true">↗</span></a>
+          <h1 id="detail-title">Б5ГИС</h1>
           <p class="detail-hero__lead">Б5ГИС собирает пространственные данные из любых источников в единую интерактивную карту. Вместо разрозненных таблиц и файлов — наглядная аналитика и решения, основанные на данных.</p>
           <div class="detail-hero__actions">
             <a class="button button--primary" href="#contact">Запросить демонстрацию</a>
             <a class="detail-link" href="#capabilities">Изучить возможности</a>
           </div>
-          <a class="detail-hero__registry" href="https://reestr.digital.gov.ru/reestr/2547625/" target="_blank" rel="noreferrer">Реестр отечественного ПО, запись № 23338 от 25.07.2024</a>
         </div>
-        <p class="detail-hero__name" aria-label="Название продукта"><span>Б5</span>ГИС</p>
       </div>
     </section>
 
@@ -113,7 +113,18 @@
       <div class="shell">
         <header class="detail-section__head reveal"><div><h2 id="pricing-title">Выберите подходящий контур</h2></div><p>Функциональность сохраняется при развёртывании в инфраструктуре заказчика и в облачной модели.</p></header>
         <div class="pricing-switch reveal" role="group" aria-label="Тип лицензии"><button class="is-active" type="button" data-license-filter="On-Premise" aria-pressed="true">On-Premise</button><button type="button" data-license-filter="SaaS" aria-pressed="false">SaaS</button></div>
-        <div class="pricing-table-wrap reveal">
+        <div class="pricing-view-switch reveal" role="group" aria-label="Вид тарифов"><button class="is-active" type="button" data-pricing-view="cards" aria-pressed="true">Карточки</button><button type="button" data-pricing-view="table" aria-pressed="false">Таблица</button></div>
+        <div class="pricing-cards reveal" data-pricing-panel="cards">
+          <article class="pricing-card" data-license="On-Premise"><div class="pricing-card__top"><h3>Локальная</h3><div class="pricing-card__facts"><div><span>Стоимость</span><strong>10 млн ₽</strong></div><div><span>Поддержка в год</span><strong>2 млн ₽</strong></div><div><span>Кол-во инсталляций</span><strong>1</strong></div></div></div><ul><li>Дистрибутив</li><li>Docker-образ</li><li>Образ виртуальной машины</li></ul><a class="pricing-card__action" href="#contact" aria-label="Попробовать локальную лицензию">Попробовать</a></article>
+          <article class="pricing-card" data-license="On-Premise"><div class="pricing-card__top"><div><h3>Корпоративная</h3><p>Для компаний с филиальной сетью</p></div><div class="pricing-card__facts"><div><span>Стоимость</span><strong>15 млн ₽</strong></div><div><span>Поддержка в год</span><strong>3 млн ₽</strong></div><div><span>Кол-во инсталляций</span><strong>До 5</strong></div></div></div><ul><li>Дистрибутив</li><li>Docker-образ</li><li>Образ виртуальной машины</li></ul><a class="pricing-card__action" href="#contact" aria-label="Попробовать корпоративную лицензию">Попробовать</a></article>
+          <article class="pricing-card" data-license="On-Premise"><div class="pricing-card__top"><div><h3>Корпоративная +</h3><p>Для федеральных компаний и распределённых структур</p></div><div class="pricing-card__facts"><div><span>Стоимость</span><strong>50 млн ₽</strong></div><div><span>Поддержка в год</span><strong>10 млн ₽</strong></div><div><span>Кол-во инсталляций</span><strong>Неогр.</strong></div></div></div><ul><li>Дистрибутив</li><li>Docker-образ</li><li>Образ виртуальной машины</li></ul><a class="pricing-card__action" href="#contact" aria-label="Попробовать лицензию Корпоративная плюс">Попробовать</a></article>
+          <article class="pricing-card" data-license="SaaS" hidden><div class="pricing-card__top"><h3>Простая</h3><div class="pricing-card__facts"><div><span>Стоимость</span><strong>0,5 млн ₽</strong></div><div><span>Поддержка в год</span><strong>0,5 млн ₽</strong></div><div><span>Кол-во порталов</span><strong>1</strong></div></div></div><ul><li>500 ГБ базы данных</li><li>500 ГБ файлов</li><li>Неограниченное кол-во пользователей</li></ul><a class="pricing-card__action" href="#contact" aria-label="Попробовать тариф Простая">Попробовать</a></article>
+          <article class="pricing-card" data-license="SaaS" hidden><div class="pricing-card__top"><h3>Продвинутая</h3><div class="pricing-card__facts"><div><span>Стоимость</span><strong>1 млн ₽</strong></div><div><span>Поддержка в год</span><strong>1 млн ₽</strong></div><div><span>Кол-во порталов</span><strong>До 5</strong></div></div></div><ul><li>1000 ГБ базы данных</li><li>1000 ГБ файлов</li><li>Неограниченное кол-во пользователей</li></ul><a class="pricing-card__action" href="#contact" aria-label="Попробовать тариф Продвинутая">Попробовать</a></article>
+          <article class="pricing-card" data-license="SaaS" hidden><div class="pricing-card__top"><h3>Профессиональная</h3><div class="pricing-card__facts"><div><span>Стоимость</span><strong>5 млн ₽</strong></div><div><span>Поддержка в год</span><strong>5 млн ₽</strong></div><div><span>Кол-во порталов</span><strong>До 91</strong></div></div></div><ul><li>2000 ГБ базы данных</li><li>2000 ГБ файлов</li><li>Неограниченное кол-во пользователей</li></ul><a class="pricing-card__action" href="#contact" aria-label="Попробовать тариф Профессиональная">Попробовать</a></article>
+          <article class="pricing-card" data-license="SaaS" hidden><div class="pricing-card__top"><div><h3>Учебная</h3><p>Для образовательных организаций</p></div><div class="pricing-card__facts"><div><span>Стоимость</span><strong>0,3 млн ₽</strong></div><div><span>Поддержка в год</span><strong>0,3 млн ₽</strong></div><div><span>Кол-во порталов</span><strong>До 3</strong></div></div></div><ul><li>100 ГБ базы данных</li><li>100 ГБ файлов</li><li>Неограниченное кол-во пользователей</li></ul><a class="pricing-card__action" href="#contact" aria-label="Попробовать тариф Учебная">Попробовать</a></article>
+          <article class="pricing-card" data-license="SaaS" hidden><div class="pricing-card__top"><div><h3>Кастомизированная</h3><p>Когда проект выходит за рамки стандартных лицензий</p></div><div class="pricing-card__facts"><div><span>Стоимость</span><strong class="pricing-card__value--nowrap">По запросу</strong></div><div><span>Поддержка в год</span><strong>20%</strong></div><div><span>Кол-во порталов</span><strong class="pricing-card__value--nowrap">По запросу</strong></div></div></div><ul><li>Объём базы данных — по запросу</li><li>Объём файлов — по запросу</li><li>Неограниченное кол-во пользователей</li></ul><a class="pricing-card__action" href="#contact" aria-label="Обсудить кастомизированную лицензию">Попробовать</a></article>
+        </div>
+        <div class="pricing-table-wrap reveal" data-pricing-panel="table" hidden>
           <table class="pricing-table">
             <thead><tr><th>Лицензия</th><th>Назначение</th><th>Стоимость</th><th>Поддержка в год</th></tr></thead>
             <tbody>
@@ -124,7 +135,7 @@
               <tr data-license="SaaS" hidden><td><strong>Продвинутая</strong><span>До пяти порталов</span></td><td>До 1000 ГБ базы данных и 1000 ГБ файлов</td><td>1 млн ₽</td><td>1 млн ₽</td></tr>
               <tr data-license="SaaS" hidden><td><strong>Профессиональная</strong><span>До 91 портала</span></td><td>До 2000 ГБ базы данных и 2000 ГБ файлов</td><td>5 млн ₽</td><td>5 млн ₽</td></tr>
               <tr data-license="SaaS" hidden><td><strong>Кастомизированная</strong><span>Индивидуальный контур</span></td><td>Когда проект выходит за рамки стандартных лицензий</td><td>По запросу</td><td>20%</td></tr>
-              <tr data-license="SaaS" hidden><td><strong>Учебная</strong><span>До трёх порталов</span></td><td>Для образовательных организаций</td><td>0,3 млн ₽</td><td>0,3 млн ₽</td></tr>
+              <tr data-license="SaaS" hidden><td><strong>Учебная</strong><span>До трёх порталов</span></td><td>Для образовательных организаций: 100 ГБ базы данных и 100 ГБ файлов</td><td>0,3 млн ₽</td><td>0,3 млн ₽</td></tr>
             </tbody>
           </table>
         </div>

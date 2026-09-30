@@ -14,3 +14,20 @@ licenseButtons.forEach((button) => {
     });
   });
 });
+
+const pricingViewButtons = [...document.querySelectorAll("[data-pricing-view]")];
+const pricingPanels = [...document.querySelectorAll("[data-pricing-panel]")];
+
+pricingViewButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const activeView = button.dataset.pricingView;
+    pricingViewButtons.forEach((item) => {
+      const isActive = item === button;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
+    pricingPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.pricingPanel !== activeView;
+    });
+  });
+});

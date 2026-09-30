@@ -25,12 +25,12 @@
   <header class="site-header" data-header>
     <a class="brand" href="./index.html#top" aria-label="Б5Групп — на главную"><img src="./assets/b5g-logo.svg" alt="Б5Групп" /></a>
     <nav class="desktop-nav" aria-label="Основная навигация">
-      <a href="./index.html#about">О компании</a><a href="./activities.html">Виды деятельности</a><a class="is-active" href="./products.html" aria-current="page">Продукты</a><a href="./cases.html">Кейсы</a><span class="nav-pending" aria-label="Блог — скоро">Блог</span>
+      <a href="./index.html#about">О компании</a><a href="./activities.html">Виды деятельности</a><a class="is-active" href="./products.html" aria-current="page">Продукты</a><a href="./cases.html">Кейсы</a><a href="./blog.html">Блог</a>
     </nav>
     <a class="header-contact" href="#contact">Сотрудничать с нами <span aria-hidden="true">↗</span></a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню"><span></span><span></span></button>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация" hidden>
-      <a href="./index.html#about">О компании</a><a href="./activities.html">Виды деятельности</a><a href="./products.html" aria-current="page">Продукты</a><a href="./cases.html">Кейсы</a><span class="nav-pending" aria-label="Блог — скоро">Блог</span><a href="#contact">Сотрудничать с нами</a>
+      <a href="./index.html#about">О компании</a><a href="./activities.html">Виды деятельности</a><a href="./products.html" aria-current="page">Продукты</a><a href="./cases.html">Кейсы</a><a href="./blog.html">Блог</a><a href="#contact">Сотрудничать с нами</a>
     </nav>
   </header>
 
@@ -44,7 +44,6 @@
           <p class="hero__lead">Б5ГИС, Б5Аналитика и СтэкРус — собственные цифровые продукты на отечественном стеке для работы с пространственными данными, аналитикой и бизнес-процессами.</p>
           <div class="hero__actions"><a class="button button--primary" href="#products-list">Смотреть продукты <span aria-hidden="true">↗</span></a></div>
         </div>
-        <p class="projects-hero__stat"><strong>3</strong><span>продукта<br />в каталоге</span></p>
       </div>
       <a class="scroll-cue" href="#products-list" aria-label="Перейти к продуктам"><span></span></a>
     </section>
@@ -56,25 +55,24 @@
           <p>3 продукта</p>
         </div>
         <div class="projects-grid is-filtered products-grid">
-          <article class="project-tile product-tile reveal">
+          <a class="project-tile product-tile reveal" href="./products/b5gis/index.html" aria-label="Открыть страницу Б5ГИС">
             <img src="./assets/product-b5gis-v4.jpg" alt="Интерфейс Б5ГИС с показателями территории и объектов недвижимости" loading="lazy" />
             <span>Реестр отечественного ПО № 23338</span>
             <h3>Б5ГИС</h3>
             <p>Сбор, хранение, обработка и визуализация пространственных данных на интерактивной карте.</p>
-            <a class="product-tile__link" href="./products/b5gis/index.html" aria-label="Подробнее о Б5ГИС">Подробнее о продукте <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="project-tile product-tile reveal">
+          </a>
+          <a class="project-tile product-tile reveal" href="./products/b5analytics/index.html" aria-label="Открыть страницу Б5Аналитики">
             <img src="./assets/product-b5analytics-v5.jpg" alt="Интерфейс Б5Аналитики с показателями состояния цифровых сервисов" loading="lazy" />
             <span>Реестр отечественного ПО № 34269</span>
             <h3>Б5Аналитика</h3>
             <p>Расчёты по нормативным методикам, аналитические витрины и дашборды с привязкой к территории.</p>
-          </article>
-          <article class="project-tile product-tile reveal">
+          </a>
+          <a class="project-tile product-tile reveal" href="./products/stackrus/index.html" aria-label="Открыть страницу СтэкРус">
             <img src="./assets/product-stackrus-v5.jpg" alt="Интерфейс СтэкРус с реестром заявок и сделок" loading="lazy" />
             <span>Реестр отечественного ПО № 18066</span>
             <h3>СтэкРус</h3>
             <p>Управление данными и автоматизация сделок купли-продажи продукции.</p>
-          </article>
+          </a>
         </div>
       </div>
     </section>

@@ -1,0 +1,11 @@
+.blog-hero .hero__image { object-position: center; }
+.blog-hero .hero__shade { background: linear-gradient(90deg, rgba(5,5,5,.9) 0%, rgba(5,5,5,.58) 42%, rgba(5,5,5,.12) 78%), linear-gradient(0deg, rgba(5,5,5,.68), transparent 60%); }
+.blog-grid .blog-tile p { max-width: 38ch; }
+.blog-grid .blog-tile { color: #fff; text-decoration: none; }
+.blog-grid .blog-tile:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
+.blog-grid .blog-tile h3 { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 4; font-size: clamp(24px, 1.85vw, 32px); }
+.blog-grid .blog-tile p { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+
+@media (max-width: 760px) {
+  .blog-hero .hero__image { object-position: 60% center; }
+}

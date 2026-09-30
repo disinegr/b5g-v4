@@ -7,10 +7,8 @@
 .products-page .product-tile:hover img { filter: saturate(1); }
 .products-page .product-tile h3 { font-size: clamp(30px, 2.5vw, 42px); }
 .products-page .product-tile p { max-width: 35ch; margin: 16px 0 0; color: rgba(245,245,242,.84); font-size: 15px; line-height: 1.5; }
-.product-tile__link { display: inline-flex; align-items: center; justify-content: space-between; gap: 12px; width: fit-content; min-height: 44px; margin-top: 18px; color: var(--orange); font-size: 14px; text-decoration: none; transition: color .2s ease; }
-.product-tile__link span { margin: 0; font-size: inherit; }
-.product-tile__link:hover { color: #fff; }
-.product-tile__link:focus-visible { outline: 2px solid var(--orange-hot); outline-offset: 4px; }
+.products-page .product-tile { cursor: pointer; }
+.products-page .product-tile:focus-visible { outline: 2px solid var(--orange-hot); outline-offset: 4px; }
 
 @media (max-width: 1120px) {
   .products-page .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

@@ -55,6 +55,7 @@ menuButton?.addEventListener("click", () => {
 
 mobileMenu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 window.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
+window.addEventListener("resize", () => { if (window.innerWidth > 1180) closeMenu(); });
 
 const updateHeader = () => {
   if (!header) return;

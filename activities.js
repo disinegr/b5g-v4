@@ -2,6 +2,29 @@ const activityButtons = [...document.querySelectorAll("[data-activity-filter]")]
 const activityGroups = [...document.querySelectorAll("[data-activity-group]")];
 const activityCount = document.querySelector("[data-activity-count]");
 const activityCountLabel = document.querySelector("[data-activity-count-label]");
+const activitiesContainer = document.querySelector("[data-activities-groups]");
+const activityCards = [...document.querySelectorAll(".activity-card")];
+
+const syncActivityCardHeights = () => {
+  if (!activitiesContainer || !activityCards.length) return;
+
+  const hiddenGroups = activityGroups.filter((group) => group.hidden);
+  hiddenGroups.forEach((group) => { group.hidden = false; });
+  activitiesContainer.classList.add("is-measuring");
+  activitiesContainer.style.setProperty("--activity-card-min-height", "0px");
+
+  const naturalHeight = Math.max(...activityCards.map((card) => card.offsetHeight));
+  const minimumHeight = window.matchMedia("(max-width: 760px)").matches ? 0 : 400;
+  activitiesContainer.style.setProperty("--activity-card-min-height", `${Math.max(naturalHeight, minimumHeight)}px`);
+  activitiesContainer.classList.remove("is-measuring");
+  hiddenGroups.forEach((group) => { group.hidden = true; });
+};
+
+let resizeFrame;
+const scheduleActivityCardHeightSync = () => {
+  cancelAnimationFrame(resizeFrame);
+  resizeFrame = requestAnimationFrame(syncActivityCardHeights);
+};
 
 const updateActivityFilter = (selected) => {
   activityButtons.forEach((button) => {
@@ -33,3 +56,6 @@ activityDetails.forEach((details) => details.addEventListener("toggle", () => {
 }));
 
 updateActivityFilter("all");
+scheduleActivityCardHeightSync();
+window.addEventListener("resize", scheduleActivityCardHeightSync);
+document.fonts?.ready.then(scheduleActivityCardHeightSync);
