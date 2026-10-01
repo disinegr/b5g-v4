@@ -38,12 +38,22 @@ const updateFilters = () => {
   });
 
   let visibleCount = 0;
+  let visibleCaseCount = 0;
+  let firstVisibleInitiative = null;
   projectTiles.forEach((tile) => {
     const matchesType = selectedType === "all" || tile.dataset.type === selectedType;
     const matchesTopic = selectedTopic === "all" || getTopicList(tile).includes(selectedTopic);
     const visible = matchesType && matchesTopic;
     tile.hidden = !visible;
-    if (visible) visibleCount += 1;
+    if (visible) {
+      visibleCount += 1;
+      if (tile.dataset.type === "case") visibleCaseCount += 1;
+      if (tile.dataset.type === "initiative" && !firstVisibleInitiative) firstVisibleInitiative = tile;
+    }
+  });
+
+  projectTiles.forEach((tile) => {
+    tile.classList.toggle("starts-new-row", tile === firstVisibleInitiative && visibleCaseCount > 0);
   });
 
   projectGrid?.classList.toggle("is-filtered", selectedType !== "case" || selectedTopic !== "all");
@@ -66,10 +76,14 @@ topicButtons.forEach((button) => button.addEventListener("click", () => {
   updateFilters();
 }));
 
-document.querySelectorAll("[data-case-preview-topic]").forEach((link) => link.addEventListener("click", () => {
-  selectedType = "all";
-  selectedTopic = link.dataset.casePreviewTopic;
-  updateFilters();
-}));
+document.querySelectorAll(".case-tile").forEach((tile) => {
+  const detailsList = [...tile.querySelectorAll("details")];
+  detailsList.forEach((details) => details.addEventListener("toggle", () => {
+    if (!details.open) return;
+    detailsList.forEach((other) => {
+      if (other !== details) other.open = false;
+    });
+  }));
+});
 
 updateFilters();
