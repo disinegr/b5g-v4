@@ -9,6 +9,7 @@
   <script>document.documentElement.classList.add("js");</script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23050505'/%3E%3Cpath d='M7 7h11a7 7 0 0 1 0 14H7V7Zm5 5v4h6a2 2 0 1 0 0-4h-6Z' fill='%23f06019'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./activities.css" />
   <link rel="stylesheet" href="./cases.css" />
   <script src="./script.js" defer></script>
   <script src="./cases.js" defer></script>
@@ -124,6 +125,62 @@
           </a>
         </div>
         <p class="projects-empty" data-project-empty hidden>В этом направлении пока нет опубликованных материалов.</p>
+
+        <section class="case-preview" id="case-preview" aria-labelledby="case-preview-heading">
+          <div class="case-preview__intro">
+            <span class="case-preview__label">Пример нового формата</span>
+            <h2 id="case-preview-heading">Карточка кейса</h2>
+            <p>Показываем структуру на примере кейса о недвижимости. Содержание разделов можно уточнить перед публикацией.</p>
+          </div>
+          <div class="case-preview__variants">
+          <article class="case-preview__card" aria-labelledby="case-preview-title">
+            <div class="case-preview__media">
+              <img src="./assets/case-city-realestate-orange-lines.png" alt="Городская застройка с выделенными объектами недвижимости" loading="lazy" />
+              <div class="case-preview__media-copy">
+                <div class="case-preview__tags"><span>Недвижимость</span><span>Госуправление</span></div>
+                <h3 id="case-preview-title">Вовлечение объектов недвижимости в налоговый оборот</h3>
+              </div>
+            </div>
+            <div class="case-preview__body">
+              <details class="case-preview__details">
+                <summary>Задача</summary>
+                <div class="case-preview__detail"><p>Найти объекты недвижимости, сведения о которых отсутствуют в учётных данных или требуют уточнения.</p></div>
+              </details>
+              <details class="case-preview__details">
+                <summary>Решение</summary>
+                <div class="case-preview__detail"><p>Сопоставить данные реестров и результаты обследования территории на карте, затем подготовить перечень объектов для проверки.</p></div>
+              </details>
+              <div class="case-preview__result">
+                <h4>Результат</h4>
+                <p>Единый перечень объектов и выявленных расхождений для дальнейшей работы заказчика.</p>
+              </div>
+              <nav class="case-preview__links" aria-label="Связанные направления кейса">
+                <a href="./activities.html#spatial-title"><span>Услуга</span><strong>Пространственные данные</strong><span aria-hidden="true">↗</span></a>
+                <a href="./products/b5gis/index.html"><span>Продукт</span><strong>Б5ГИС</strong><span aria-hidden="true">↗</span></a>
+                <a href="#projects-list" data-case-preview-topic="realestate"><span>Отрасль</span><strong>Недвижимость</strong><span aria-hidden="true">↗</span></a>
+              </nav>
+            </div>
+          </article>
+          <article class="activity-card case-preview__activity" aria-labelledby="case-preview-activity-title">
+            <span class="activity-card__index">02</span>
+            <h4 id="case-preview-activity-title">Вовлечение объектов недвижимости в налоговый оборот</h4>
+            <p class="activity-card__lead">Сопоставляем сведения об объектах с фактической застройкой и готовим данные для дальнейшей проверки.</p>
+            <details>
+              <summary>Задача</summary>
+              <div class="activity-card__detail"><p>Найти объекты недвижимости, сведения о которых отсутствуют в учётных данных или требуют уточнения.</p></div>
+            </details>
+            <details>
+              <summary>Решение</summary>
+              <div class="activity-card__detail"><p>Сопоставить данные реестров и результаты обследования территории на карте, затем подготовить перечень объектов для проверки.</p></div>
+            </details>
+            <details>
+              <summary>Результат</summary>
+              <div class="activity-card__detail"><p>Единый перечень объектов и выявленных расхождений для дальнейшей работы заказчика.</p></div>
+            </details>
+            <a class="activity-card__action" href="./products/b5gis/index.html">Посмотреть Б5ГИС <span aria-hidden="true">↗</span></a>
+          </article>
+          </div>
+        </section>
       </div>
     </section>
 

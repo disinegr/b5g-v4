@@ -66,4 +66,10 @@ topicButtons.forEach((button) => button.addEventListener("click", () => {
   updateFilters();
 }));
 
+document.querySelectorAll("[data-case-preview-topic]").forEach((link) => link.addEventListener("click", () => {
+  selectedType = "all";
+  selectedTopic = link.dataset.casePreviewTopic;
+  updateFilters();
+}));
+
 updateFilters();

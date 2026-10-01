@@ -15,6 +15,7 @@
 .detail-hero__lead { max-width: 980px; margin: 0; color: rgba(245,245,242,.82); font-size: clamp(18px,1.3vw,22px); line-height: 1.52; }
 .detail-hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin: 0; }
 .detail-link { display: inline-flex; align-items: center; min-height: 48px; color: var(--orange); font-weight: 500; border-bottom: 1px solid rgba(240,96,25,.52); }
+.detail-hero__actions .detail-link { border-bottom: 0; }
 .detail-hero__registry { display: inline-flex; align-items: center; gap: 8px; width: fit-content; margin: 0; color: rgba(245,245,242,.58); font-size: 14px; line-height: 1.5; }
 .detail-hero__registry span { font-size: 18px; line-height: 1; }
 .detail-hero__registry:hover { color: #fff; }
@@ -70,12 +71,12 @@
 .detail-cta h2 { max-width: 18ch; font-size: clamp(40px,3.6vw,64px); }
 .detail-cta p:not(.eyebrow) { max-width: 740px; margin: 24px 0 0; color: var(--muted); font-size: 17px; line-height: 1.6; }
 
-.pricing-switch { display: inline-flex; gap: 8px; margin-top: 64px; padding: 6px; background: #111; }
-.pricing-switch button { min-width: 160px; min-height: 50px; padding-inline: 24px; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
-.pricing-switch button.is-active { background: var(--orange); color: #fff; }
-.pricing-view-switch { display: flex; gap: 24px; width: fit-content; margin-top: 26px; border-bottom: 1px solid rgba(245,245,242,.18); }
-.pricing-view-switch button { min-height: 44px; padding: 0 0 9px; border: 0; border-bottom: 2px solid transparent; background: none; color: var(--muted); cursor: pointer; }
-.pricing-view-switch button.is-active { border-bottom-color: var(--orange); color: #fff; }
+.pricing-controls { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 64px; }
+.pricing-switch,.pricing-view-switch { display: inline-flex; gap: 8px; padding: 6px; background: #111; }
+.pricing-switch button,.pricing-view-switch button { min-width: 160px; min-height: 50px; padding-inline: 24px; border: 0; background: transparent; color: var(--muted); cursor: pointer; transition: background .2s ease,color .2s ease; }
+.pricing-switch button:hover:not(.is-active),.pricing-view-switch button:hover:not(.is-active) { background: #222; color: #fff; }
+.pricing-switch button.is-active,.pricing-view-switch button.is-active { background: var(--orange); color: #fff; }
+.pricing-view-switch button.is-active { background: #242424; }
 .pricing-switch button:focus-visible,.pricing-view-switch button:focus-visible,.pricing-card__action:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
 .pricing-cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 52px 16px; margin-top: 48px; }
 .pricing-cards[hidden],.pricing-table-wrap[hidden],.pricing-card[hidden] { display: none !important; }
@@ -159,8 +160,9 @@
   .story-row--reverse figure { order: 0; }
   .story-row figure { aspect-ratio: .9; }
   .detail-cta__inner { align-items: start; }
-  .pricing-switch { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
-  .pricing-switch button { min-width: 0; padding-inline: 12px; }
+  .pricing-controls { flex-direction: column; align-items: stretch; gap: 16px; }
+  .pricing-switch,.pricing-view-switch { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
+  .pricing-switch button,.pricing-view-switch button { min-width: 0; padding-inline: 12px; }
   .pricing-cards { grid-template-columns: 1fr; gap: 34px; margin-top: 36px; }
   .pricing-card__top { min-height: 220px; padding: 24px; }
   .pricing-card ul { min-height: 0; }
