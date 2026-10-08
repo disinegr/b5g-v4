@@ -1,8 +1,6 @@
-document.documentElement.classList.add("js");
-
 const preloader = document.querySelector("[data-preloader]");
 const preloaderCount = document.querySelector("[data-preloader-count]");
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 if (preloader) {
   const finishPreloader = () => {
@@ -10,7 +8,7 @@ if (preloader) {
     document.body.classList.remove("is-loading");
   };
 
-  if (prefersReducedMotion) {
+  if (reduceMotion.matches) {
     preloader.classList.add("is-mark-visible", "is-word-visible");
     window.setTimeout(() => preloader.classList.add("is-exiting"), 320);
     window.setTimeout(finishPreloader, 520);
@@ -35,7 +33,6 @@ const header = document.querySelector("[data-header]");
 const firstHero = document.querySelector("main > .hero, main > .detail-hero");
 const menuButton = document.querySelector(".menu-button");
 const mobileMenu = document.querySelector("#mobile-menu");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const closeMenu = () => {
   if (!menuButton || !mobileMenu) return;
@@ -119,6 +116,8 @@ form?.addEventListener("submit", (event) => {
   const subject = encodeURIComponent(`Заявка с сайта Б5Групп — ${data.get("name")}`);
   const body = encodeURIComponent([
     `Имя: ${data.get("name")}`,
+    ...(data.get("company") ? [`Компания: ${data.get("company")}`] : []),
+    ...(data.get("position") ? [`Должность: ${data.get("position")}`] : []),
     `Контакт: ${data.get("contact")}`,
     "",
     `Задача: ${data.get("message")}`

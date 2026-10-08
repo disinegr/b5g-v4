@@ -8,14 +8,18 @@ const activityCards = [...document.querySelectorAll(".activity-card")];
 const syncActivityCardHeights = () => {
   if (!activitiesContainer || !activityCards.length) return;
 
+  if (window.matchMedia("(max-width: 760px)").matches) {
+    activitiesContainer.style.setProperty("--activity-card-min-height", "0px");
+    return;
+  }
+
   const hiddenGroups = activityGroups.filter((group) => group.hidden);
   hiddenGroups.forEach((group) => { group.hidden = false; });
   activitiesContainer.classList.add("is-measuring");
   activitiesContainer.style.setProperty("--activity-card-min-height", "0px");
 
   const naturalHeight = Math.max(...activityCards.map((card) => card.offsetHeight));
-  const minimumHeight = window.matchMedia("(max-width: 760px)").matches ? 0 : 400;
-  activitiesContainer.style.setProperty("--activity-card-min-height", `${Math.max(naturalHeight, minimumHeight)}px`);
+  activitiesContainer.style.setProperty("--activity-card-min-height", `${Math.max(naturalHeight, 400)}px`);
   activitiesContainer.classList.remove("is-measuring");
   hiddenGroups.forEach((group) => { group.hidden = true; });
 };

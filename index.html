@@ -9,6 +9,8 @@
   <script>document.documentElement.classList.add("js");</script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23050505'/%3E%3Cpath d='M7 7h11a7 7 0 0 1 0 14H7V7Zm5 5v4h6a2 2 0 1 0 0-4h-6Z' fill='%23f06019'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./products.css" />
+  <link rel="stylesheet" href="./responsive-type.css" />
   <script src="./script.js" defer></script>
 </head>
 <body class="is-loading">
@@ -33,7 +35,7 @@
   </header>
 
   <main id="content">
-    <section class="hero" id="top">
+    <section class="hero hero--home" id="top">
       <img class="hero__image parallax" src="./assets/hero-block-v4.jpg" alt="Объёмный фирменный знак Б5Групп в оранжевом свете" />
       <div class="hero__shade" aria-hidden="true"></div>
       <div class="hero__content shell">
@@ -71,14 +73,15 @@
 
     <section class="section about" id="about">
       <div class="shell">
-        <div class="section-heading section-heading--wide reveal"><h2>Берёмся за проекты, от которых отказались другие</h2></div>
-        <div class="about__grid">
+        <div class="about__layout">
+          <div class="section-heading reveal"><h2>Берёмся за проекты,<br class="about__desktop-break" /> от которых отказались<br class="about__desktop-break" /> другие</h2></div>
           <p class="lead reveal">Разрозненные данные, унаследованные системы, нестандартные процессы. Любой объект или территорию выводим на интерактивную карту — из карточки объекта один клик до геопривязки, реестров и нормативно-справочной информации.</p>
           <div class="about__facts reveal">
-            <article><strong>С 2015 года</strong><span>разрабатываем программное обеспечение под ключ</span></article>
-            <article><strong>Полный цикл</strong><span>от методологии и аналитики до внедрения и поддержки</span></article>
-            <article><strong>В контуре заказчика</strong><span>включая закрытую инфраструктуру без доступа в интернет</span></article>
+            <article><strong>С 2015 года</strong><p>разрабатываем программное обеспечение под ключ</p></article>
+            <article><strong>Полный цикл</strong><p>от методологии и аналитики до внедрения и поддержки</p></article>
+            <article><strong>В контуре заказчика</strong><p>включая закрытую инфраструктуру без доступа в интернет</p></article>
           </div>
+          <figure class="about__visual reveal"><img src="./assets/b5g-shield-metal-orange.png" alt="Металлический щит с эмблемой Б5Групп" width="1984" height="2118" loading="lazy" decoding="async" /></figure>
         </div>
       </div>
     </section>
@@ -111,7 +114,7 @@
 
     <section class="section company">
       <div class="shell">
-        <div class="company__intro reveal"><h2>Сильная команда разработки и аналитики</h2><p>Работаем с органами власти федерального, регионального и муниципального уровня и с крупными промышленными компаниями. Решения соответствуют требованиям регуляторов и замещают устаревшие зарубежные системы.</p></div>
+        <div class="company__intro reveal"><h2>Сильная команда <br class="desktop-title-break" />разработки и аналитики</h2><p>Работаем с органами власти федерального, регионального и муниципального уровня и с крупными промышленными компаниями. Решения соответствуют требованиям регуляторов и замещают устаревшие зарубежные системы.</p></div>
         <div class="company__body">
           <figure class="quote reveal"><img src="./assets/team-quote-topography-v2.png" alt="" loading="lazy" /><blockquote>«Информационные технологии как воздух — необходимое условие жизни»</blockquote><figcaption><strong>Вячеслав Бутин</strong><span>Соучредитель Б5Групп, заместитель генерального директора, к.т.н., эксперт IATD</span></figcaption></figure>
           <div class="strengths">
@@ -126,36 +129,45 @@
 
     <section class="section products" id="products">
       <div class="shell">
-        <div class="section-heading section-heading--split reveal"><div><h2>Собственные продукты на отечественном стеке</h2></div><div class="section-heading__aside"><p>Без зависимости от зарубежных вендоров и лицензий.</p><a class="text-link text-link--orange" href="./products.html">Все продукты</a></div></div>
+        <div class="section-heading section-heading--split reveal"><div><h2>Собственные продукты <br class="desktop-title-break" />на отечественном стеке</h2></div><div class="section-heading__aside"><p>Без зависимости от зарубежных вендоров и лицензий.</p><a class="text-link text-link--orange" href="./products.html">Все продукты</a></div></div>
         <div class="product-grid">
-          <a class="product-card reveal" href="./products/b5gis/index.html"><img src="./assets/product-b5gis-v4.jpg" alt="Интерфейс Б5ГИС с показателями территории и объектов недвижимости" loading="lazy" /><div><h3>Б5ГИС</h3><p>Сбор, хранение, обработка и визуализация пространственных данных на интерактивной карте.</p><span>Реестр отечественного ПО № 23338</span></div></a>
-          <article class="product-card product-card--offset reveal"><img src="./assets/product-b5analytics-v5.jpg" alt="Интерфейс Б5Аналитики с показателями состояния цифровых сервисов" loading="lazy" /><div><h3>Б5Аналитика</h3><p>Расчёты по нормативным методикам, аналитические витрины и дашборды с привязкой к территории.</p><span>Реестр отечественного ПО № 34269</span></div></article>
-          <article class="product-card reveal"><img src="./assets/product-stackrus-v5.jpg" alt="Интерфейс СтэкРус с реестром заявок и сделок" loading="lazy" /><div><h3>СтэкРус</h3><p>Управление данными и автоматизация сделок купли-продажи продукции.</p><span>Реестр отечественного ПО № 18066</span></div></article>
+          <a class="product-tile reveal" href="./products/b5gis/index.html" aria-label="Открыть страницу Б5ГИС"><div class="product-tile__media"><img src="./assets/b5gis-interface-preview.jpg" alt="Интерфейс Б5ГИС с почвенной картой России и пространственными слоями" loading="lazy" /></div><div class="product-tile__copy"><span>Реестр отечественного ПО № 23338</span><h3>Б5ГИС</h3><p>Сбор, хранение, обработка и визуализация пространственных данных на интерактивной карте.</p></div></a>
+          <a class="product-tile reveal" href="./products/b5analytics/index.html" aria-label="Открыть страницу Б5Аналитики"><div class="product-tile__media"><img src="./assets/b5analytics-automated-calculation.jpg" alt="Б5Аналитика: рейтинг территорий по налоговому потенциалу и карта" loading="lazy" /></div><div class="product-tile__copy"><span>Реестр отечественного ПО № 34269</span><h3>Б5Аналитика</h3><p>Расчёты по нормативным методикам, аналитические витрины и дашборды с привязкой к территории.</p></div></a>
+          <a class="product-tile reveal" href="./products/stackrus/index.html" aria-label="Открыть страницу СтэкРус"><div class="product-tile__media"><img src="./assets/stackrus-applications.jpg" alt="СтэкРус: реестр заявок на договоры" loading="lazy" /></div><div class="product-tile__copy"><span>Реестр отечественного ПО № 18066</span><h3>СтэкРус</h3><p>Паспорта сделок, согласование цены, расчёт доставки и передача данных в 1С:ERP.</p></div></a>
         </div>
       </div>
     </section>
 
-    <section class="section process"><div class="shell process__grid"><div class="section-heading reveal"><h2>Превращаем сложные процессы в удобные цифровые продукты</h2></div><div class="process__steps">
-      <article class="reveal"><span>01</span><h3>Исследование и данные</h3><p>Изучаем задачи, собираем материалы из архивов, реестров и съёмки, приводим их к единой системе координат и справочникам.</p></article>
-      <article class="reveal"><span>02</span><h3>Понятные интерфейсы</h3><p>Связываем карту, реестр, таблицы и аналитику. Один объект доступен во всех нужных интерпретациях.</p></article>
-      <article class="reveal"><span>03</span><h3>Готово к эксплуатации</h3><p>Передаём развёрнутый контур, обучаем пользователей, готовим документацию и сопровождаем систему.</p></article>
-    </div></div></section>
+    <section class="section process"><div class="shell process__grid">
+      <div class="section-heading reveal"><h2>Превращаем сложные процессы <br class="desktop-title-break" />в удобные цифровые продукты</h2></div>
+      <div class="process__steps">
+        <article class="reveal">
+          <span class="process__number">01</span><h3>Исследование и данные</h3><p>Изучаем задачи, собираем материалы из архивов, реестров и съёмки, приводим их к единой системе координат и справочникам.</p>
+        </article>
+        <article class="reveal">
+          <span class="process__number">02</span><h3>Понятные интерфейсы</h3><p>Связываем карту, реестр, таблицы и аналитику. Один объект доступен во всех нужных интерпретациях.</p>
+        </article>
+        <article class="reveal">
+          <span class="process__number">03</span><h3>Готово к эксплуатации</h3><p>Передаём развёрнутый контур, обучаем пользователей, готовим документацию и сопровождаем систему.</p>
+        </article>
+      </div>
+    </div></section>
 
     <section class="section cases" id="cases">
       <div class="shell">
-        <div class="section-heading section-heading--split reveal"><div><h2>Проекты, доведённые до промышленной эксплуатации</h2></div><div class="section-heading__aside"><p>Для органов власти и крупных промышленных компаний.</p><a class="text-link text-link--orange" href="./cases.html">Все проекты</a></div></div>
+        <div class="section-heading section-heading--split reveal"><div><h2>Проекты, доведённые <br class="desktop-title-break" />до промышленной эксплуатации</h2></div><div class="section-heading__aside"><p>Для органов власти и крупных промышленных компаний.</p><a class="text-link text-link--orange" href="./cases.html">Все проекты</a></div></div>
         <div class="case-grid">
-          <a class="case-card case-card--large reveal" href="./products/b5gis/index.html"><img src="./assets/case-city-realestate-orange-lines.png" alt="Городская застройка и недвижимость" loading="lazy" /><span>Госуправление</span><h3>Вовлечение объектов недвижимости в налоговый оборот</h3></a>
-          <a class="case-card reveal" href="./products/b5gis/index.html"><img src="./assets/case-land-monitoring-orange-lines.png" alt="Контроль территории по данным дистанционного зондирования" loading="lazy" /><span>Госуправление</span><h3>Дистанционный контроль использования территории</h3></a>
-          <a class="case-card reveal" href="./products/b5gis/index.html"><img src="./assets/case-soil-model-orange-lines.png" alt="Цифровая модель почвенного покрова" loading="lazy" /><span>АПК</span><h3>Единая цифровая модель почвенного покрова</h3></a>
-          <a class="case-card reveal" href="./products/b5gis/index.html"><img src="./assets/case-industrial-import-substitution-orange-lines.png" alt="Промышленная инфраструктура" loading="lazy" /><span>Нефть и газ</span><h3>Перевод отраслевой системы с зарубежной платформы</h3></a>
+          <a class="case-card reveal" href="./products/b5gis/index.html"><img src="./assets/case-city-realestate-orange-lines.png" alt="Городская застройка и недвижимость" loading="lazy" /><div class="case-card__copy"><span>Госуправление</span><h3>Вовлечение объектов недвижимости в налоговый оборот</h3></div></a>
+          <a class="case-card reveal" href="./products/b5gis/index.html"><img src="./assets/case-land-monitoring-orange-lines.png" alt="Контроль территории по данным дистанционного зондирования" loading="lazy" /><div class="case-card__copy"><span>Госуправление</span><h3>Дистанционный контроль использования территории</h3></div></a>
+          <a class="case-card reveal" href="./products/b5gis/index.html"><img src="./assets/case-soil-model-orange-lines.png" alt="Цифровая модель почвенного покрова" loading="lazy" /><div class="case-card__copy"><span>АПК</span><h3>Единая цифровая модель почвенного покрова</h3></div></a>
+          <a class="case-card reveal" href="./products/b5gis/index.html"><img src="./assets/case-industrial-import-substitution-orange-lines.png" alt="Промышленная инфраструктура" loading="lazy" /><div class="case-card__copy"><span>Нефть и газ</span><h3>Перевод отраслевой системы с зарубежной платформы</h3></div></a>
         </div>
       </div>
     </section>
 
     <section class="mission"><img class="mission__image" src="./assets/bg_section2.jpg" alt="Фирменный знак Б5Групп с оранжевыми линиями" loading="lazy" /><div class="mission__veil" aria-hidden="true"></div><div class="shell mission__content reveal"><h2>Автоматизировать рутину, чтобы люди сосредоточились на главном</h2><p>Мы верим, что технологии не просто передают операции программному обеспечению, а делают работу каждого клиента и пользователя понятнее и спокойнее.</p></div></section>
 
-    <section class="section initiatives" id="initiatives"><div class="shell initiatives__grid"><div class="section-heading initiatives__intro reveal"><h2>Находим узкое место и приносим готовую технологию</h2></div><div class="initiative-list">
+    <section class="section initiatives" id="initiatives"><div class="shell initiatives__grid"><div class="section-heading initiatives__intro reveal"><h2>Находим узкое место <br class="desktop-title-break" />и приносим готовую технологию</h2></div><div class="initiative-list">
       <article class="initiative reveal" id="initiative-land-bank"><div class="initiative__media"><img src="./assets/case-industrial-import-substitution-orange-lines.png" alt="Цифровая промышленная система на фоне производственной площадки" loading="lazy" /></div><div class="initiative__body"><div><span>Недвижимость · АПК · Госуправление</span><h3>Банк сельхозземель с девелоперским потенциалом</h3></div><p>Выделяем массивы, непригодные для сельхозоборота, но ценные для градостроительного развития.</p></div></article>
       <article class="initiative reveal" id="initiative-port-control"><div class="initiative__media"><img src="./assets/initiative-port-vessel-control.png" alt="Суда проходят через цифровой контур контроля морского порта" loading="lazy" /></div><div class="initiative__body"><div><span>Транспорт и логистика · Госуправление</span><h3>Контроль прохода судов в морские порты</h3></div><p>Верифицируем материалы обследований и формируем единый банк данных по всем портам.</p></div></article>
     </div></div></section>
@@ -169,15 +181,15 @@
       <details class="reveal"><summary>Что если данные в плохом состоянии?</summary><p>Унифицируем форматы и справочники, устраняем расхождения и восстанавливаем недостающие сведения.</p></details>
     </div></div></section>
 
-    <section class="section beyond"><div class="shell"><div class="section-heading section-heading--wide reveal"><h2>Объединяем людей, отрасли и полезные дела</h2></div><div class="beyond-grid">
-      <a class="beyond-card beyond-card--feature reveal" href="https://b5club.ru/#Home" target="_blank" rel="noreferrer"><img src="./assets/club-b5-community.png" alt="Карта сообщества Клуба Б5" /><span>Сообщество</span><h3>Клуб Б5</h3><p>Люди из разных отраслей с общим языком и общим уровнем задач.</p><i aria-hidden="true">↗</i></a>
-      <article class="beyond-card beyond-card--support reveal"><img src="./assets/support-equipment.png" alt="Комплект оборудования связи и навигации" /><span>Поддержка</span><h3>Помощь бойцам<br />на СВО</h3><p>Закупаем системы связи, навигации и наблюдения для решения боевых задач.</p></article>
-      <article class="beyond-card beyond-card--education reveal"><img src="./assets/agrontri-fields-drone.png" alt="Дрон обследует сельскохозяйственные поля" /><span>Образование</span><h3>Конкурс<br />«АгроНТРИ»</h3><p>Вовлекаем школьников в профессии на стыке сельского хозяйства и ИТ.</p></article>
-      <article class="beyond-card beyond-card--sport reveal"><img src="./assets/digital-hockey-league.png" alt="Тактическая схема хоккейной площадки" /><span>Спорт</span><h3>Цифровая хоккейная лига</h3><p>Создаём любительскую лигу цифровизаторов России и поддерживаем команды.</p></article>
+    <section class="section beyond"><div class="shell"><div class="section-heading section-heading--wide reveal"><h2>Объединяем людей, <br class="desktop-title-break" />отрасли и полезные дела</h2></div><div class="beyond-grid">
+      <a class="beyond-card beyond-card--feature reveal" href="https://b5club.ru/#Home" target="_blank" rel="noreferrer"><img src="./assets/club-b5-community.png" alt="Карта сообщества Клуба Б5" loading="lazy" /><span>Сообщество</span><h3>Клуб Б5</h3><p>Люди из разных отраслей с общим языком и общим уровнем задач.</p><i aria-hidden="true">↗</i></a>
+      <article class="beyond-card beyond-card--support reveal"><img src="./assets/support-equipment.png" alt="Комплект оборудования связи и навигации" loading="lazy" /><span>Поддержка</span><h3>Помощь бойцам<br />на СВО</h3><p>Закупаем системы связи, навигации и наблюдения для решения боевых задач.</p></article>
+      <article class="beyond-card beyond-card--education reveal"><img src="./assets/agrontri-fields-drone.png" alt="Дрон обследует сельскохозяйственные поля" loading="lazy" /><span>Образование</span><h3>Конкурс<br />«АгроНТРИ»</h3><p>Вовлекаем школьников в профессии на стыке сельского хозяйства и ИТ.</p></article>
+      <article class="beyond-card beyond-card--sport reveal"><img src="./assets/digital-hockey-league.png" alt="Тактическая схема хоккейной площадки" loading="lazy" /><span>Спорт</span><h3>Цифровая хоккейная лига</h3><p>Создаём любительскую лигу цифровизаторов России и поддерживаем команды.</p></article>
     </div></div></section>
 
-    <section class="contact" id="contact"><div class="shell contact__grid"><div class="contact__copy reveal"><h2>Обсудим ваш проект</h2><p>Оставьте заявку — мы свяжемся с вами и предложим решение.</p><div class="contact__direct"><a class="contact-link" href="tel:+74954079920"><span class="contact-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.7 9.8 8l-2 1.8c1.2 2.5 3 4.3 5.5 5.5l1.8-2 4.3 2.6-.8 3.1c-.2.8-.9 1.3-1.7 1.3C9.6 20.3 3.7 14.4 3.7 7.1c0-.8.5-1.5 1.3-1.7l2.2-.7Z"/></svg></span><span class="contact-link__body"><strong>+7 495 407 99 20</strong><small>Пн–Пт, 10:00–19:00 (МСК)</small></span></a><a class="contact-link" href="mailto:info@b5g.ru"><span class="contact-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6.5h18v11H3zM3.8 7.3 12 13l8.2-5.7"/></svg></span><span class="contact-link__body"><strong>info@b5g.ru</strong><small>Мы всегда на связи</small></span></a></div></div><form class="contact-form reveal" data-contact-form>
-      <label><span>Имя</span><input name="name" autocomplete="name" placeholder="Как к вам обращаться?" required /></label><label><span>Телефон или почта</span><input name="contact" autocomplete="email" placeholder="+7 999 123 45 67 или name@company.ru" required /></label><label class="contact-form__wide"><span>Кратко о задаче</span><textarea name="message" rows="4" placeholder="Расскажите о проекте..." required></textarea></label><label class="consent contact-form__wide"><input type="checkbox" required /><span>Согласен на обработку персональных данных</span></label><button class="button button--primary contact-form__wide" type="submit">Отправить заявку <span aria-hidden="true">→</span></button><p class="form-status contact-form__wide" role="status" aria-live="polite"></p>
+<section class="contact" id="contact"><div class="shell contact__grid"><div class="contact__copy reveal"><h2>Обсудим <br /><span>ваш проект</span></h2><p>Оставьте заявку — мы свяжемся с вами и предложим решение.</p><div class="contact__direct"><a class="contact-link" href="tel:+74954079920"><span class="contact-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.7 9.8 8l-2 1.8c1.2 2.5 3 4.3 5.5 5.5l1.8-2 4.3 2.6-.8 3.1c-.2.8-.9 1.3-1.7 1.3C9.6 20.3 3.7 14.4 3.7 7.1c0-.8.5-1.5 1.3-1.7l2.2-.7Z"/></svg></span><span class="contact-link__body"><strong>+7 495 407 99 20</strong><small>Пн–Пт, 10:00–19:00 (МСК)</small></span></a><a class="contact-link" href="mailto:info@b5g.ru"><span class="contact-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6.5h18v11H3zM3.8 7.3 12 13l8.2-5.7"/></svg></span><span class="contact-link__body"><strong>info@b5g.ru</strong><small>Мы всегда на связи</small></span></a></div></div><form class="contact-form reveal" data-contact-form>
+      <label><span>Имя</span><input name="name" autocomplete="name" placeholder="Как к вам обращаться?" required /></label><label><span>Компания</span><input name="company" autocomplete="organization" placeholder="Название компании" /></label><label><span>Должность</span><input name="position" autocomplete="organization-title" placeholder="Ваша должность" /></label><label><span>Почта или телефон</span><input name="contact" autocomplete="email" placeholder="+7 999 123 45 67 или name@company.ru" required /></label><label class="contact-form__wide"><span>Задача</span><textarea name="message" rows="4" placeholder="Расскажите о проекте..." required></textarea></label><label class="consent contact-form__wide"><input type="checkbox" required /><span>Согласен на обработку персональных данных</span></label><button class="button button--primary contact-form__wide" type="submit">Отправить заявку <span aria-hidden="true">↗</span></button><p class="form-status contact-form__wide" role="status" aria-live="polite"></p>
     </form></div></section>
   </main>
 

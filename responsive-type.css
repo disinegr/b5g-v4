@@ -1,0 +1,173 @@
+/* Shared type scale for every page. Keep this after page-specific styles. */
+@media (min-width: 769px) {
+  :root {
+    --type-hero: clamp(42px, calc(6.3px + 4.65vw), 90px);
+    --type-section: clamp(42px, calc(19.7px + 2.9vw), 72px);
+    --type-inner: clamp(28px, calc(16.1px + 1.55vw), 44px);
+    --type-card: clamp(28px, calc(20.6px + .97vw), 38px);
+    --type-body: clamp(16px, calc(13.77px + .29vw), 19px);
+    --type-quote: clamp(24px, calc(16.6px + .97vw), 34px);
+    --type-interactive: clamp(22px, calc(19px + .35vw), 26px);
+    --type-action: clamp(16px, calc(14.5px + .2vw), 18px);
+  }
+
+  main h1 { font-size: var(--type-hero) !important; line-height: 1.04 !important; }
+  main h2 { font-size: var(--type-section) !important; line-height: 1.08 !important; }
+  main :is(h3, h4) { font-size: var(--type-card) !important; line-height: 1.16 !important; }
+  main .product-benefits__card h3 { font-size: clamp(24px, 1.75vw, 30px) !important; }
+  main .activity-group__head h3 { font-size: var(--type-section) !important; line-height: 1.08 !important; }
+  main .news-prose > h2 { font-size: var(--type-inner) !important; line-height: 1.15 !important; }
+
+  main :is(p, li) { font-size: var(--type-body) !important; line-height: 1.55; }
+  main :is(.button, .text-link, .detail-link, .activity-card__action,
+    .case-tile__body a, .pricing-card__action, .activity-card summary,
+    .case-tile__body summary) { font-size: var(--type-action) !important; }
+  main .accordion summary { font-size: var(--type-interactive) !important; line-height: 1.3; }
+  main :is(.quote blockquote, .testimonial blockquote, .news-quote,
+    .news-quote p) { font-size: var(--type-quote) !important; line-height: 1.28; }
+  main :is(.service-item__label, .product-card > div > span, .case-card__copy > span,
+    .initiative > span, .beyond-card > span, .project-tile > span,
+    .case-tile__copy > span, .activity-card__index,
+    .capability-card > div > span, .pricing-card__facts span,
+    .projects-hero__stat span, .detail-hero__registry) {
+    font-size: clamp(14px, 1vw, 16px) !important;
+    line-height: 1.4;
+  }
+  main .pricing-card__top p { font-size: 14px !important; }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --type-section: clamp(26px, calc(14.57px + 3.571vw), 42px);
+    --type-card: clamp(22px, calc(17.71px + 1.339vw), 28px);
+    --type-quote: clamp(20px, calc(17.14px + .893vw), 24px);
+    --type-interactive: clamp(18px, calc(15.14px + .893vw), 22px);
+  }
+
+  main :is(h1, h2) {
+    max-width: 100%;
+    font-size: var(--type-section) !important;
+    line-height: 1.1 !important;
+    overflow-wrap: break-word;
+  }
+
+  main :is(h3, h4, h5, h6) {
+    max-width: 100%;
+    font-size: var(--type-card) !important;
+    line-height: 1.16 !important;
+    overflow-wrap: break-word;
+  }
+  main .product-benefits__card h3 { font-size: clamp(22px, 5vw, 27px) !important; }
+
+  main :is(.hero h1, .detail-hero h1, .news-hero h1,
+    .section-heading h2, .company__intro h2, .faq__intro h2,
+    .contact__copy h2, .mission h2, .projects-catalog__head h2,
+    .detail-section__head h2, .product-benefits__head h2, .detail-cta h2,
+    .detail-documents h2, .news-next h2, .activity-group__head h3) {
+    max-width: 100%;
+    font-size: var(--type-section) !important;
+    line-height: 1.1 !important;
+    overflow-wrap: break-word;
+  }
+
+  main :is(.service-item h3, .strengths h3, .product-card h3,
+    .process__steps h3, .case-card h3, .initiative h3,
+    .beyond-card h3, .project-tile h3, .product-tile h3,
+    .case-tile__copy h3, .activity-card h4, .capability-card h3,
+    .pricing-card h3, .product-overview__item h3, .news-prose > h2) {
+    max-width: 100%;
+    font-size: var(--type-card) !important;
+    line-height: 1.16 !important;
+    overflow-wrap: break-word;
+  }
+
+  main :is(p, li) {
+    font-size: 16px !important;
+    line-height: 1.55;
+    overflow-wrap: break-word;
+  }
+
+  main :is(.button, .text-link, .detail-link, .activity-card__action,
+    .case-tile__body a, .pricing-card__action, .activity-card summary,
+    .case-tile__body summary) {
+    font-size: 16px !important;
+  }
+
+  main .accordion summary {
+    font-size: var(--type-interactive) !important;
+    line-height: 1.3;
+  }
+
+  main :is(.quote blockquote, .testimonial blockquote, .news-quote,
+    .news-quote p) {
+    font-size: var(--type-quote) !important;
+    line-height: 1.28;
+  }
+
+  main :is(.service-item__label, .product-card > div > span, .case-card__copy > span,
+    .initiative > span, .beyond-card > span, .project-tile > span,
+    .case-tile__copy > span, .activity-card__index,
+    .capability-card > div > span, .pricing-card__facts span,
+    .projects-hero__stat span, .detail-hero__registry) {
+    font-size: 14px !important;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 360px) {
+  main :is(h1, h2) {
+    font-size: var(--type-section) !important;
+    line-height: 1.1 !important;
+  }
+
+  main :is(h3, h4, h5, h6) {
+    font-size: var(--type-card) !important;
+    line-height: 1.16 !important;
+  }
+
+  main .activity-group__head h3 {
+    font-size: var(--type-section) !important;
+    line-height: 1.1 !important;
+  }
+
+  main .news-prose > h2 {
+    font-size: var(--type-card) !important;
+    line-height: 1.16 !important;
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+    --type-section: 22px;
+    --type-card: 18px;
+    --type-quote: 18px;
+    --type-interactive: 18px;
+  }
+
+  body { font-size: 14px; }
+  main :is(h1, h2, .activity-group__head h3, .news-prose > h2) {
+    font-size: 22px !important;
+    line-height: 1.18 !important;
+  }
+  main :is(h3, h4, h5, h6, .quote blockquote, .testimonial blockquote, .news-quote, .news-quote p) {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+  }
+  main :is(p, li, figcaption, .button, .text-link, .detail-link,
+    .contact-link small, .contact-form label > span, .activity-card__detail,
+    .case-tile__detail-content, .pricing-card__facts span,
+    .detail-metrics span, .news-metrics span, .projects-empty,
+    .activity-card summary, .case-tile__body summary,
+    .pricing-switch button, .pricing-view-switch button) {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+  main .accordion summary { font-size: 18px !important; line-height: 1.3 !important; }
+  main :is(.detail-metrics strong, .news-metrics strong, .projects-hero__stat strong, .about__facts strong) {
+    font-size: 22px !important;
+  }
+  .contact-link strong { font-size: 18px !important; }
+  .contact-form :is(input:not([type="checkbox"]), textarea) { font-size: 14px !important; }
+  .mobile-menu a { font-size: 18px !important; }
+  .footer :is(p, nav) { font-size: 14px !important; }
+}

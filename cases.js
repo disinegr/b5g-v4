@@ -1,6 +1,5 @@
 const typeButtons = [...document.querySelectorAll("[data-type-filter]")];
 const topicButtons = [...document.querySelectorAll("[data-topic-filter]")];
-const projectGrid = document.querySelector("[data-project-grid]");
 const projectTiles = [...document.querySelectorAll("[data-type][data-topics]")];
 const projectCount = document.querySelector("[data-project-count]");
 const projectCountLabel = document.querySelector("[data-project-count-label]");
@@ -56,7 +55,6 @@ const updateFilters = () => {
     tile.classList.toggle("starts-new-row", tile === firstVisibleInitiative && visibleCaseCount > 0);
   });
 
-  projectGrid?.classList.toggle("is-filtered", selectedType !== "case" || selectedTopic !== "all");
   if (projectCount) projectCount.textContent = String(visibleCount);
   if (projectCountLabel) {
     const forms = selectedType === "case" ? ["кейс", "кейса", "кейсов"] : selectedType === "initiative" ? ["инициатива", "инициативы", "инициатив"] : ["материал", "материала", "материалов"];

@@ -3,61 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Б5Аналитика — аналитическая платформа Б5Групп для расчётов, отчётов и визуализации данных с привязкой к территории." />
+  <meta name="description" content="Внедрение расчётных модулей без изменения кода, анализ и визуализация данных в реальном времени: дашборды, сводные таблицы, геоаналитика. В реестре отечественного ПО, запись № 34269." />
   <meta name="theme-color" content="#050505" />
-  <title>Б5Аналитика — Б5Групп</title>
+  <title>Б5Аналитика — платформа аналитических отчётов из реестра отечественного ПО</title>
   <script>document.documentElement.classList.add("js");</script>
   <link rel="icon" type="image/svg+xml" href="../../assets/b5g-logo.svg" />
   <link rel="stylesheet" href="../../styles.css" />
   <link rel="stylesheet" href="../../product-detail.css" />
+  <link rel="stylesheet" href="../../responsive-type.css" />
   <script src="../../script.js" defer></script>
 </head>
-<body class="detail-page">
+<body class="detail-page analytics-page is-loading">
+  <div class="preloader" data-preloader aria-hidden="true"><div class="preloader__logo"><img class="preloader__logo-layer preloader__logo-mark" src="../../assets/b5g-logo.svg" alt="" /><img class="preloader__logo-layer preloader__logo-word" src="../../assets/b5g-logo.svg" alt="" /></div><div class="preloader__counter"><span data-preloader-count>0</span><em>%</em></div></div>
   <a class="skip-link" href="#content">Перейти к содержанию</a>
   <header class="site-header" data-header>
     <a class="brand" href="../../index.html#top" aria-label="Б5Групп — на главную"><img src="../../assets/b5g-logo.svg" alt="Б5Групп" /></a>
-    <nav class="desktop-nav" aria-label="Основная навигация">
-      <a href="../../index.html#about">О компании</a><a href="../../activities.html">Виды деятельности</a><a class="is-active" href="../../products.html" aria-current="page">Продукты</a><a href="../../cases.html">Кейсы</a><a href="../../blog.html">Блог</a>
-    </nav>
+    <nav class="desktop-nav" aria-label="Основная навигация"><a href="../../index.html#about">О компании</a><a href="../../activities.html">Виды деятельности</a><a class="is-active" href="../../products.html" aria-current="page">Продукты</a><a href="../../cases.html">Кейсы</a><a href="../../blog.html">Блог</a></nav>
     <a class="header-contact" href="#contact">Сотрудничать с нами <span aria-hidden="true">↗</span></a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню"><span></span><span></span></button>
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация" hidden>
-      <a href="../../index.html#about">О компании</a><a href="../../activities.html">Виды деятельности</a><a href="../../products.html" aria-current="page">Продукты</a><a href="../../cases.html">Кейсы</a><a href="../../blog.html">Блог</a><a href="#contact">Сотрудничать с нами</a>
-    </nav>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация" hidden><a href="../../index.html#about">О компании</a><a href="../../activities.html">Виды деятельности</a><a href="../../products.html" aria-current="page">Продукты</a><a href="../../cases.html">Кейсы</a><a href="../../blog.html">Блог</a><a href="#contact">Сотрудничать с нами</a></nav>
   </header>
-
   <main id="content">
-    <section class="detail-hero" id="top" aria-labelledby="detail-title">
-      <img class="detail-hero__image parallax" src="../../assets/product-b5analytics-v5.jpg" alt="Интерфейс Б5Аналитики с аналитическими показателями" />
+    <section class="detail-hero analytics-hero" id="top" aria-labelledby="detail-title">
+      <img class="detail-hero__image parallax" src="../../assets/b5analytics-automated-calculation.jpg" alt="Кабинет руководителя Б5Аналитики с рейтингом территорий и картой" />
       <div class="detail-hero__shade" aria-hidden="true"></div>
-      <div class="detail-hero__content shell">
-        <div class="detail-hero__copy">
-          <a class="detail-hero__back" href="../../products.html"><span aria-hidden="true">←</span> Вернуться к продуктам</a>
-          <p class="detail-hero__registry">Реестр отечественного ПО № 34269</p>
-          <h1 id="detail-title">Б5Аналитика</h1>
-          <p class="detail-hero__lead">Расчёты по нормативным методикам, аналитические витрины и дашборды с привязкой к территории.</p>
-          <div class="detail-hero__actions"><a class="button button--primary" href="#contact">Запросить демонстрацию</a><a class="detail-link" href="#capabilities">Изучить возможности</a></div>
-        </div>
-      </div>
+      <div class="detail-hero__content shell"><div class="detail-hero__copy">
+        <a class="detail-hero__back" href="../../products.html"><span aria-hidden="true">←</span> Вернуться к продуктам</a>
+        <a class="detail-hero__registry" href="https://reestr.digital.gov.ru/reestr/12840511/" target="_blank" rel="noopener noreferrer">Реестр отечественного ПО, запись № 34269 от 04.07.2026 <span aria-hidden="true">↗</span></a>
+        <h1 id="detail-title">Б5Аналитика</h1>
+        <p class="detail-hero__lead">Б5Аналитика — программное обеспечение для анализа и визуализации данных и формирования интерактивных аналитических отчётов в режиме реального времени. Расчётные задачи встраиваются в систему без изменения кода: методика подключается настройкой, и система начинает считать по ней — переписывать платформу и ждать релиза не нужно.</p>
+        <div class="detail-hero__actions"><a class="button button--primary" href="#contact">Запросить демонстрацию</a><a class="detail-link" href="#capabilities">Изучить возможности</a></div>
+      </div></div>
     </section>
-
-    <section class="detail-section product-overview" id="capabilities" aria-labelledby="capabilities-title">
-      <div class="shell">
-        <header class="detail-section__head reveal"><div><h2 id="capabilities-title">Данные становятся основой решений</h2></div><p>Б5Аналитика объединяет разнородную информацию и помогает представить результаты анализа в удобном для работы виде.</p></header>
-        <div class="product-overview__grid">
-          <article class="product-overview__item reveal"><span>01</span><h3>Данные из разных источников</h3><p>Платформа работает с атрибутивными, документальными, статистическими и нормативно-справочными данными.</p></article>
-          <article class="product-overview__item reveal"><span>02</span><h3>Расчёты и отчёты</h3><p>Расчёты по нормативным методикам превращают исходные сведения в аналитические отчёты и показатели.</p></article>
-          <article class="product-overview__item reveal"><span>03</span><h3>Карта и дашборды</h3><p>Результаты можно изучать в диаграммах, таблицах и дашбордах, в том числе с привязкой к территории.</p></article>
-        </div>
+    <section class="detail-metrics analytics-benefits" aria-label="Преимущества Б5Аналитики"><div class="shell detail-metrics__grid">
+      <article><strong>Конструктор дашбордов</strong><span>Сборка аналитических панелей без участия разработки</span></article>
+      <article><strong>Без изменения кода</strong><span>Внедрение расчётных модулей на уровне конфигурации</span></article>
+      <article><strong>Режим реального времени</strong><span>Пересчёт отчётов при изменении источников</span></article>
+      <article><strong>Наглядность данных</strong><span>От сводной таблицы до карты в одном дашборде</span></article>
+    </div></section>
+    <section class="detail-section detail-capabilities" id="capabilities" aria-labelledby="capabilities-title"><div class="shell">
+      <header class="detail-section__head reveal"><div><h2 id="capabilities-title">Функциональные возможности</h2></div><p>Б5Аналитика превращает массивы разнородных данных — атрибутивных, нормативно-справочных, статистических и других — в понятную основу для управленческих решений.</p></header>
+      <div class="capability-grid">
+        <article class="capability-card capability-card--feature reveal"><img src="../../assets/b5analytics-screen-3.jpg" alt="" loading="lazy" /><div><span>Методики</span><h3>Расчётные задачи</h3><p><span class="capability-copy--full">Заводите расчётные задачи по мере того, как они появляются в работе: изменился норматив, добавилось направление, понадобился показатель, которого раньше не считали. Система расширяется под ваши задачи — а не вы подстраиваете работу под то, что заложили при внедрении.</span><span class="capability-copy--compact">Добавляйте новые методики и показатели без переделки платформы.</span></p></div></article>
+        <article class="capability-card reveal"><img src="../../assets/b5analytics-screen-2.jpg" alt="" loading="lazy" /><div><span>Нормативы</span><h3>Нормативно-справочная база</h3><p><span class="capability-copy--full">Держите все данные для расчётов в одном месте: нормативные документы, параметры объектов, отраслевые справочники. Правьте норматив один раз — изменение само применится ко всем расчётам, которые на него опираются.</span><span class="capability-copy--compact">Обновите норматив один раз — он применится ко всем связанным расчётам.</span></p></div></article>
+        <article class="capability-card reveal"><img src="../../assets/b5analytics-screen-6.jpg" alt="" loading="lazy" /><div><span>Расчёт</span><h3>Автоматизированный расчёт</h3><p><span class="capability-copy--full">Запускайте расчёт по выбранной методике — система пройдёт весь цикл сама, по нормативным требованиям и без ручного ввода на каждом шаге. Загрузили новые данные или поправили существующие — показатели пересчитаются автоматически, перепроверять формулы не нужно.</span><span class="capability-copy--compact">Считайте по методике автоматически и пересчитывайте при обновлении данных.</span></p></div></article>
+        <article class="capability-card reveal"><img src="../../assets/b5analytics-screen-1.jpg" alt="" loading="lazy" /><div><span>Настройка</span><h3>Конструктор панелей</h3><p><span class="capability-copy--full">Собирайте панель отчётов под свою задачу прямо в интерфейсе: выбираете, какой показатель вывести и в каком разрезе, система строит диаграмму или таблицу. Понадобился новый срез к совещанию — сделаете его сами, не заводя задачу на разработку.</span><span class="capability-copy--compact">Собирайте диаграммы и таблицы в интерфейсе без помощи разработчика.</span></p></div></article>
+        <article class="capability-card capability-card--wide reveal"><img src="../../assets/b5analytics-screen-4.jpg" alt="" loading="lazy" /><div><span>Карта</span><h3>Данные на карте</h3><p><span class="capability-copy--full">Работайте с картой как с любым другим компонентом дашборда — наравне с диаграммой и таблицей. Показатели связываются с ГИС-слоем, и каждый объект получает своё значение: чем оно больше, тем крупнее объект на карте. Распределение по объектам видно сразу, без чтения столбца цифр. Геоданные обновились — карта перестроится сама.</span><span class="capability-copy--compact">Смотрите распределение показателей на карте, которая обновляется вместе с данными.</span></p></div></article>
+        <article class="capability-card reveal"><img src="../../assets/b5analytics-screen-5.jpg" alt="" loading="lazy" /><div><span>Результат</span><h3>Визуализация и экспорт</h3><p><span class="capability-copy--full">Читайте результат по цвету: значения в таблице подсвечиваются по заданным порогам, и видно, где показатель вышел за норму. Открывайте карточку объекта с его итогами, собирайте сводные отчёты и дашборды. Выгружайте диаграммы в PNG, JPEG, PDF и SVG, таблицы — в XLSX и CSV.</span><span class="capability-copy--compact">Оценивайте показатели по цвету и выгружайте диаграммы и таблицы.</span></p></div></article>
       </div>
-    </section>
-
-    <section class="detail-cta"><div class="shell detail-cta__inner reveal"><div><h2>Покажем Б5Аналитику на вашей задаче</h2><p>Обсудим источники данных, необходимые расчёты и формат представления результатов.</p></div><a class="button button--primary" href="#contact">Запросить демонстрацию</a></div></section>
-    <section class="contact" id="contact"><div class="shell contact__grid"><div class="contact__copy reveal"><h2>Обсудим ваш проект</h2><p>Оставьте заявку — мы свяжемся с вами и предложим решение.</p><div class="contact__direct"><a class="contact-link" href="tel:+74954079920"><span class="contact-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.7 9.8 8l-2 1.8c1.2 2.5 3 4.3 5.5 5.5l1.8-2 4.3 2.6-.8 3.1c-.2.8-.9 1.3-1.7 1.3C9.6 20.3 3.7 14.4 3.7 7.1c0-.8.5-1.5 1.3-1.7l2.2-.7Z"/></svg></span><span class="contact-link__body"><strong>+7 495 407 99 20</strong><small>Пн–Пт, 10:00–19:00 (МСК)</small></span></a><a class="contact-link" href="mailto:info@b5g.ru"><span class="contact-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6.5h18v11H3zM3.8 7.3 12 13l8.2-5.7"/></svg></span><span class="contact-link__body"><strong>info@b5g.ru</strong><small>Мы всегда на связи</small></span></a></div></div><form class="contact-form reveal" data-contact-form>
-      <label><span>Имя</span><input name="name" autocomplete="name" placeholder="Как к вам обращаться?" required /></label><label><span>Телефон или почта</span><input name="contact" autocomplete="email" placeholder="+7 999 123 45 67 или name@company.ru" required /></label><label class="contact-form__wide"><span>Кратко о задаче</span><textarea name="message" rows="4" placeholder="Расскажите о проекте..." required></textarea></label><label class="consent contact-form__wide"><input type="checkbox" required /><span>Согласен на обработку персональных данных</span></label><button class="button button--primary contact-form__wide" type="submit">Отправить заявку <span aria-hidden="true">→</span></button><p class="form-status contact-form__wide" role="status" aria-live="polite"></p>
+    </div></section>
+    <section class="detail-section product-benefits" aria-labelledby="benefits-title"><div class="shell">
+      <header class="product-benefits__head reveal"><h2 id="benefits-title">От данных<br />к решению</h2><p>Б5Аналитика соединяет источники и расчёты в одной модели, чтобы вместо ручной сверки получать ясный результат для решения.</p></header>
+      <div class="product-benefits__grid">
+        <article class="product-benefits__card reveal"><svg aria-hidden="true" viewBox="0 0 32 32"><circle cx="6" cy="16" r="2"/><circle cx="26" cy="7" r="2"/><circle cx="26" cy="25" r="2"/><path d="M8 15 24 8M8 17l16 7"/></svg><h3>Источники подключены</h3><p>Базы, файлы и геоданные работают вместе без отдельного хранилища под аналитику.</p></article>
+        <article class="product-benefits__card reveal"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M5 7h22M5 16h22M5 25h22M11 4v6m10 3v6M15 22v6"/><circle cx="11" cy="7" r="2"/><circle cx="21" cy="16" r="2"/><circle cx="15" cy="25" r="2"/></svg><h3>Расчёт по вашей методике</h3><p>Аналитическая модель следует вашим правилам, а не заставляет подстраивать работу под систему.</p></article>
+        <article class="product-benefits__card reveal"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M6 6h20v20H6zM6 13h20M13 13v13"/><path d="m17 20 3 3 6-7"/></svg><h3>Без ручной сверки</h3><p>Расчёты выполняются в системе вместо повторной проверки показателей в таблицах.</p></article>
+        <article class="product-benefits__card reveal"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M4 25h24M7 21v-6m6 6V9m6 12v-4m6 4V6"/><circle cx="25" cy="6" r="2"/></svg><h3>Результат наглядный</h3><p>Диаграммы, таблицы и карта показывают выводы в удобном для задачи виде.</p></article>
+        <article class="product-benefits__card reveal"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M5 16a11 11 0 1 1 22 0 11 11 0 0 1-22 0Z"/><path d="m11 17 3 3 7-8"/></svg><h3>Основа для решения</h3><p>Руководитель видит проверенный результат расчёта, на который можно опереться.</p></article>
+      </div>
+    </div></section>
+    <section class="detail-section detail-testimonials" aria-labelledby="testimonials-title"><div class="shell">
+      <header class="detail-section__head reveal"><div><h2 id="testimonials-title">Что говорят пользователи</h2></div><p>Б5Аналитика работает в администрациях городов и регионов, отраслевых ведомствах и корпорациях.</p></header>
+      <div class="testimonial-grid">
+        <figure class="testimonial reveal"><blockquote>«Раньше значительная часть аналитики собиралась вручную, а результаты приходилось дополнительно проверять и сводить. Сейчас панель пересчитывается сама, и на совещании мы смотрим одни и те же цифры».</blockquote><figcaption><strong>Иван Паршин</strong><span>Руководитель аналитического подразделения</span></figcaption></figure>
+        <figure class="testimonial reveal"><blockquote>«Нам было важно не зависеть от разработки каждый раз, когда нужен новый разрез. Аналитик собирает панель сам, за час-два, и этого достаточно».</blockquote><figcaption><strong>Светлана Николаева</strong><span>Отраслевой эксперт</span></figcaption></figure>
+        <figure class="testimonial reveal"><blockquote>«Результаты стали понятны не только аналитикам. Вместо выгрузок с цифрами — панель, где видно и динамику, и структуру, и расположение объектов на карте».</blockquote><figcaption><strong>Игорь Киримов</strong><span>Руководитель проекта</span></figcaption></figure>
+      </div>
+    </div></section>
+    <section class="detail-cta"><div class="shell detail-cta__inner reveal"><div><h2>Посмотрите систему на своей задаче</h2></div><div class="detail-cta__content"><p>Возьмём одну вашу методику, подключим её на демонстрации и покажем расчёт на ваших данных — чтобы вы увидели работу на реальной задаче, а не на витринном примере.</p><a class="button button--primary" href="#contact">Запросить демонстрацию</a></div></div></section>
+    <section class="detail-section custom-pricing" id="pricing" aria-labelledby="pricing-title"><div class="shell custom-pricing__layout">
+      <div class="custom-pricing__copy reveal">
+        <h2 id="pricing-title">Стоимость<br />под вашу задачу</h2>
+        <p>Б5Аналитика лицензируется под задачу. Стоимость зависит от модели размещения, числа пользователей и объёма подключаемых данных, поэтому мы считаем её после короткого разговора, а не выводим среднюю цифру, которая всё равно не совпадёт с вашим случаем.</p>
+        <a class="button button--primary custom-pricing__button" href="#contact">Получить расчёт <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="custom-pricing__visual reveal"><img src="../../assets/b5g-pricing-dial.png" width="1254" height="1254" alt="" loading="lazy" decoding="async" /></div>
+    </div></section>
+    <section class="detail-section detail-documents" aria-labelledby="documents-title"><div class="shell detail-documents__grid reveal"><div><h2 id="documents-title">Документы <span class="documents-title__second-line">и полезные материалы</span></h2></div><div><p>Полный комплект документации: описание функциональных характеристик, руководство пользователя, руководство администратора, техническое задание, программа и методика испытаний, документация API для интеграторов.</p><div class="detail-documents__links"><a class="button button--primary" href="#contact">Запросить документы</a><a class="detail-link" href="#contact">Лицензионное соглашение</a></div></div></div></section>
+    <section class="detail-section detail-faq faq" id="faq"><div class="shell faq__grid">
+      <div class="faq__intro reveal"><h2>Часто задаваемые вопросы</h2><p>Собрали то, что чаще всего спрашивают на первых встречах. Если нужного ответа нет — напишите, ответим предметно.</p></div>
+      <div class="accordion reveal">
+        <details open><summary>Входит ли Б5Аналитика в реестр отечественного ПО?</summary><p>Да. Реестровая запись № 34269 от 04.07.2026, класс ПО 05.13. Продукт можно закупать организациям с требованием использовать отечественное программное обеспечение.</p></details>
+        <details><summary>Что именно делает система?</summary><p>Хранит исходные данные для расчётов и ведёт нормативно-справочную базу. Выполняет вычисления по заданным методикам в соответствии с нормативными требованиями. Показывает результат интерактивными диаграммами, таблицами, карточками объектов и дашбордами, в том числе с привязкой к карте.</p></details>
+        <details><summary>Как в систему добавляется новая расчётная методика?</summary><p>Подключается без изменения кода: ядро платформы не переписывается, пересборка и релиз не требуются. Поэтому срок появления новой методики — это срок настройки, а не цикл разработки с планированием, тестированием и выкладкой.</p></details>
+        <details><summary>Для каких отраслей подходит система?</summary><p>Ядро расчётов предметно-независимое: отрасль задаётся методиками и справочниками, а не переписыванием системы. Поэтому Б5Аналитика применима везде, где расчёт выполняется по нормативной методике.</p></details>
+        <details><summary>Какие типы визуализации поддерживаются?</summary><p>Столбчатые и круговые гистограммы, линейные и динамические графики, сводные и плоские таблицы, картографические окна. Все компоненты обновляются автоматически при изменении исходных данных.</p></details>
+        <details><summary>Как настраивается компонент панели?</summary><p>В режиме конструирования: компонент выбирается на панели, измерения и меры переносятся в поля конфигурации перетаскиванием, для мер задаётся агрегация — сумма, среднее или количество. Для диаграмм измерения идут по оси X, меры по оси Y; для таблиц измерения становятся столбцами. Настройки применяются одной кнопкой.</p></details>
+        <details><summary>В каких форматах выгружаются результаты?</summary><p>Диаграммы — PNG, JPEG, PDF, SVG. Таблицы — XLSX и CSV. Карты — PNG.</p></details>
+        <details><summary>Как разграничивается доступ?</summary><p>Права назначаются администратором отдельно на панели и отдельно на наборы данных, поэтому сотрудник видит только то, что относится к его направлению. Режим конструирования доступен аналитику, обычному пользователю — нет: случайно переделать чужую панель он не может.</p></details>
+        <details><summary>Где разворачивается система?</summary><p>В облаке или в инфраструктуре заказчика — архитектура совместима с обеими моделями. Компоненты поставляются в Docker-контейнерах, работают на Ubuntu Server 20.04 и выше или на Astra Linux SE. Поддерживается размещение на двух географически разделённых площадках с репликацией данных на резервную.</p></details>
+        <details><summary>Что нужно, чтобы начать?</summary><p>Мы разворачиваем демостенд, подключаем ваш источник данных и собираем первую панель. На первой встрече обсуждаем, какие показатели нужны, откуда берутся данные и в каком контуре разворачиваться.</p></details>
+      </div>
+    </div></section>
+<section class="contact" id="contact"><div class="shell contact__grid"><div class="contact__copy reveal"><h2>Обсудим <br /><span>ваш проект</span></h2><p>Оставьте заявку — мы свяжемся с вами и предложим решение.</p><div class="contact__direct"><a class="contact-link" href="tel:+74954079920"><span class="contact-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.7 9.8 8l-2 1.8c1.2 2.5 3 4.3 5.5 5.5l1.8-2 4.3 2.6-.8 3.1c-.2.8-.9 1.3-1.7 1.3C9.6 20.3 3.7 14.4 3.7 7.1c0-.8.5-1.5 1.3-1.7l2.2-.7Z"/></svg></span><span class="contact-link__body"><strong>+7 495 407 99 20</strong><small>Пн–Пт, 10:00–19:00 (МСК)</small></span></a><a class="contact-link" href="mailto:info@b5g.ru"><span class="contact-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6.5h18v11H3zM3.8 7.3 12 13l8.2-5.7"/></svg></span><span class="contact-link__body"><strong>info@b5g.ru</strong><small>Мы всегда на связи</small></span></a></div></div><form class="contact-form reveal" data-contact-form>
+      <label><span>Имя</span><input name="name" autocomplete="name" placeholder="Как к вам обращаться?" required /></label><label><span>Компания</span><input name="company" autocomplete="organization" placeholder="Название компании" /></label><label><span>Должность</span><input name="position" autocomplete="organization-title" placeholder="Ваша должность" /></label><label><span>Почта или телефон</span><input name="contact" autocomplete="email" placeholder="+7 999 123 45 67 или name@company.ru" required /></label><label class="contact-form__wide"><span>Задача</span><textarea name="message" rows="4" placeholder="Расскажите о проекте..." required></textarea></label><label class="consent contact-form__wide"><input type="checkbox" required /><span>Согласен на обработку персональных данных</span></label><button class="button button--primary contact-form__wide" type="submit">Отправить заявку <span aria-hidden="true">↗</span></button><p class="form-status contact-form__wide" role="status" aria-live="polite"></p>
     </form></div></section>
   </main>
-
   <footer class="footer"><div class="shell footer__inner"><img src="../../assets/b5g-logo.svg" alt="Б5Групп" /><p>© 2026 Б5Групп. Все права защищены.</p><nav aria-label="Ссылки в подвале"><a href="#top">Наверх</a><a href="../../cases.html">Проекты</a><a href="#contact">Контакты</a></nav></div></footer>
 </body>
 </html>
