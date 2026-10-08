@@ -24,6 +24,11 @@
   .product-tile__copy { padding: 26px; }
 }
 
+@media (max-width: 768px) {
+  .products .product-grid { grid-template-columns: minmax(0, 1fr); }
+  .products .product-tile p { max-width: none; width: 100%; }
+}
+
 @media (max-width: 760px) {
   .products-hero .hero__image { object-position: 70% center; }
   .products-hero .hero__shade { background: linear-gradient(0deg, rgba(5,5,5,.9), rgba(5,5,5,.45) 75%); }
